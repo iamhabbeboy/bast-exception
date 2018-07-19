@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exception </title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function show_more(e) {
+            e.preventDefault()
+            const el = document.querySelector('.panel-error-editor')
+            if( el.style.display == 'none') {
+                el.style.display = 'block'
+            } else {
+                el.style.display = 'none'
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+            <img src="bast-logo.jpeg" border="0" class="image">
+        <h1>
+            Unhandled Exception </h1>
+        <hr>
+        <p class="error-show">
+            This is the Actual Error Message Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium itaque ad numquam doloremque cum! Voluptatem repudiandaei.
+        </p>
+        <div class="panel-error">
+            <p>
+               /usr/local/package/index.py is undefined on line: 300
+            </p>
+            <p>
+                /usr/local/package/index.py is undefined on line: 20
+            </p>
+            <p>
+                /usr/local/package/index.py is undefined on line: 50
+            </p>
+        </div>
+        <div class="show-more">
+            <a href="#" id="show-more" onclick="show_more(event)">show more stack trace</a>
+        </div>
+        <div class="panel-error-editor">
+            <span class="class">class</span> <span class="method">User:</span>
+            <p></p>
+            &nbsp;&nbsp;<span class="method">def</span> <span class="variable">__init__</span>:
+        </div>
+    </div>
+</body>
+</html>
